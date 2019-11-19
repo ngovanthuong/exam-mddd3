@@ -1,0 +1,16 @@
+<form action="" method="POST" role="form">
+  <legend>Add new awesome</legend>
+  <div class="form-group">
+    <label>Tag</label>
+    <input type = "text" class="form-control"[(ngModel)]="awesome.tag"[ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label> Url</label>
+    <input type = "text" class="form-control" [(ngModel)]="awesome.url"[ngModelOptions]="{standalone: true}"  >
+  </div>
+  <div class="form-group">
+    <label >Description</label>
+    <textarea class="form-control"[(ngModel)]="awesome.descriptions"[ngModelOptions]="{standalone: true}" row="6"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary"[style.margin-top.px]="30" (click)="onAddAwesome()">Thêm sách</button>
+</form>
